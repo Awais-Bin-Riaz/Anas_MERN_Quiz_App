@@ -10,7 +10,7 @@ export const useFetchQestion = () => {
         setGetData({ isLoading: true });
         (async () => {
             try {
-                const [{ questions, answers }] = await getServerData(`http://localhost:5000/api/questions`, data => data);
+                const [{ questions, answers }] = await getServerData(`https://quiz-app-6hr9.onrender.com/api/questions`, data => data);
                 
                 if (questions.length > 0) {
                     setGetData({ isLoading: false, apiData: questions });
